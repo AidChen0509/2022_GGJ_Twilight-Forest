@@ -2,25 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterBehavior : MonoBehaviour
+public class MonsterBehavior : Monster
 {
     //entry point
-    [SerializeField] Transform monsterlocation;
-    [SerializeField] Transform playerlocation;
-    public Transform monsterAilocation;
+    [SerializeField] GameObject monsterlocation;
+    [SerializeField] GameObject playerlocation;
+    public Transform monsterLocation1;
+    public Transform monsterLocation2;
 
+    public GameObject monsterAiLocation2;
     private void Start()
     {
         //gettransform system
-        monsterlocation = GetComponent<Transform>();
+        
     }
     //method
-    public void idleWalking()
+    public void idleWalking(GameObject lastplayerLocation)
     {
         //design the idle walking method , let monster go to what we set
+        
 
     }
-    public void cautionWalking(GameObject playerLocation)
+    public void cautionWalking(GameObject lastplayerLocation)
     {
         //design the monster be caution let he walk to the player location
 

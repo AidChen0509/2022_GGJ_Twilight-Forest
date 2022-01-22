@@ -14,13 +14,15 @@ public class Monster : MonoBehaviour
     //stat 參數與caution數值
     public int state = 0;
     public int cautionValue = 0;
-    public bool Islight = false;
+    public bool IsCatchedPlayer = false;
+    public Ray2D lightray;
     
     // Start is called before the first frame update
     void Start()
     {
         //monsterAnimator = GetComponent<Animator>();
         monsterAi = monsterAisystem.GetComponent<MonsterAIsys>();
+
         
     }
 

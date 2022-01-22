@@ -8,6 +8,7 @@ public class MonsterAIsys : MonoBehaviour
     public GameObject playerLocation;
     public GameObject playeringame;
     public MonsterBehavior Mbehavior;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,8 @@ public class MonsterAIsys : MonoBehaviour
 
     internal void idlemode(GameObject monsterObject)
     {
-        monsterObject.GetComponent<MonsterBehavior>().idleWalking();
+        
+        monsterObject.GetComponent<MonsterBehavior>().idleWalking(playerLocation);
         
         
         throw new NotImplementedException();
