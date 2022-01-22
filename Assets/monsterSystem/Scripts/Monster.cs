@@ -100,8 +100,8 @@ public class Monster : MonoBehaviour
         Debug.DrawRay(dot.position, direction, Color.green, 0.01f);
         try
         {
-            Collider2D playerobj = Physics2D.Raycast(dot.position, direction, lightDistance).collider;
-            Debug.Log(playerobj.name);
+            Collider2D playerobj = Physics2D.Raycast(dot.position, direction, lightDistance,1<<LayerMask.NameToLayer("wallgroup")).collider;
+            //Debug.Log(playerobj.name);
             if (playerobj.tag == "Player")
             {
                 Debug.Log("p");
