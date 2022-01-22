@@ -13,6 +13,7 @@ public class MonsterAIsys : MonoBehaviour
     public GameObject[] point;
     public Vector3 p;
     public bool cpoint;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class MonsterAIsys : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         
     }
 

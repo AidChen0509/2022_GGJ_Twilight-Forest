@@ -31,6 +31,7 @@ public class Monster : MonoBehaviour
     public float lookAngle = 90f;
     public int lookAccurate = 4;
     int pcount = 0;
+    public Animator anim;
     public Collider2D playerobj;
     // Start is called before the first frame update
     void Start()
@@ -68,6 +69,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        anim.SetFloat("MonsterCaution", cautionValue);
         Vector2 direction = new Vector2(front.position.x - dot.position.x, front.position.y - dot.position.y);
 
 

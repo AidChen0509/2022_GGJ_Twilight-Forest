@@ -8,6 +8,8 @@ TagManager:
   - SwampObject
   - wall
   - trap
+  - monster
+  - light
   layers:
   - Default
   - TransparentFX
