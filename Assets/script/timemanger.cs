@@ -5,7 +5,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 public class timemanger : MonoBehaviour
 {
     public float time1, time2, time3, time4;
-    public GameObject light;
+  //  public GameObject light;
     public Light2D Tfl;
 
     // Start is called before the first frame update
