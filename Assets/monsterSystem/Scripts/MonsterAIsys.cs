@@ -7,7 +7,7 @@ public class MonsterAIsys : MonoBehaviour
 {
     public GameObject LastplayerLocation;
     public GameObject playeringame;
-    public GameObject patrol;
+    //public GameObject patrol;
     public MonsterBehavior Mbehavior;
     public Monster mm;
     public GameObject[] point;
@@ -16,7 +16,7 @@ public class MonsterAIsys : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        p = patrol.transform.position;
+        //p = patrol.transform.position;
     }
 
     // Update is called once per frame

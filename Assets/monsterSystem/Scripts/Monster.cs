@@ -46,7 +46,8 @@ public class Monster : MonoBehaviour
         {
             if (cautionset)
             {
-                cautionValue += 7;
+                if(cautionValue<120)
+                    cautionValue += 7;
             }
             else
             {
@@ -101,7 +102,7 @@ public class Monster : MonoBehaviour
             
             if (playerobj.tag == "Player")
             {
-                print(playerobj.tag);
+                //print(playerobj.tag);
                 lastplayerpos.position = playerobj.transform.position;
                 cautionset = true;
             }
