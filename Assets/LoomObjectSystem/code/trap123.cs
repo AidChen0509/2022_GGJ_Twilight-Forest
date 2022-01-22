@@ -6,6 +6,7 @@ public class trap123 : MonoBehaviour
 {
     public GameObject player;
     public GameObject trap;
+    public GameObject monster;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,10 @@ public class trap123 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            print("a");
             other.GetComponent<playermove>().trapact = true;
+            monster = GameObject.FindGameObjectWithTag("monster").gameObject;
+            monster.GetComponent<Monster>().cautionset = true;
             trap.SetActive(false);
             //player.moveSpeed = moveSpeed / 2;
         }
