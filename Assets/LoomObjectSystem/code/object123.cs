@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class object123 : MonoBehaviour
 {
     public GameObject Circle;
+    public GameObject light;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,10 @@ public class object123 : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Circle.SetActive(false);
+        }
+        if (other.gameObject.tag == "light") 
+        {
+            light.SetActive(true);
         }
     }
 }

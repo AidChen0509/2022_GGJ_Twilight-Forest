@@ -21,18 +21,18 @@ public class ObjectAI : MonoBehaviour
         Goal = 0;
     }
 
-    /*public void SpawnObject()//生成食物
+    public void SpawnObject()//生成食物
     {
-        if (transform.childCount < 9)
+        if (transform.childCount < 8)
         {
             GameObject Object = Instantiate(ObjectPrefabs[0], transform);
-            Object.transform.position = new Vector3(Random.Range(-8.6f, 8.29f), Random.Range(-4.3f, 4.6f), 500f);
+            Object.transform.position = new Vector3(Random.Range(stage_lu.position.x, stage_rd.position.x), Random.Range(stage_lu.position.y, stage_rd.position.y), -6f);
         }
-    }*/
+    }
 
     public void SpawnTrap()//生成隨機陷阱
     {
-        if (transform.childCount < 7)
+        if (transform.childCount < 6)
         {
             GameObject trap = Instantiate(TrapPrefabs[0], transform);
             trap.transform.position = new Vector3(Random.Range(stage_lu.position.x, stage_rd.position.x), Random.Range(stage_lu.position.y, stage_rd.position.y), -6f);
@@ -43,6 +43,7 @@ public class ObjectAI : MonoBehaviour
     void Update()
     {
         SpawnTrap();
+        SpawnObject();
         //PointCounter();
     }
 
