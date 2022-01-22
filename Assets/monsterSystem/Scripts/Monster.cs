@@ -48,12 +48,14 @@ public class Monster : MonoBehaviour
             {
                 if(cautionValue<120)
                     cautionValue += 7;
+                cautionset = false;
             }
             else
             {
                 if (cautionValue > 0) cautionValue--;
             }
             yield return new WaitForSeconds(0.1f);
+            
         }
 
     }
@@ -99,15 +101,14 @@ public class Monster : MonoBehaviour
         try
         {
             Collider2D playerobj = Physics2D.Raycast(dot.position, direction, lightDistance).collider;
-            
+            Debug.Log(playerobj.name);
             if (playerobj.tag == "Player")
             {
+                Debug.Log("p");
                 //print(playerobj.tag);
                 lastplayerpos.position = playerobj.transform.position;
                 cautionset = true;
             }
-            else
-                cautionset = false;
         }
         catch (Exception ex)
         {
