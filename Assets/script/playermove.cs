@@ -9,6 +9,8 @@ public class playermove : MonoBehaviour
     public float RotationSpeed;
     float energy = 20;
     bool canrun;
+    public Vector2 mo;
+    public Animator playerani;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,15 @@ public class playermove : MonoBehaviour
     void Update()
     {
         rb.velocity =new Vector2(Input.GetAxisRaw("Horizontal")* speed, Input.GetAxisRaw("Vertical")* speed) ;
+        mo = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
+        if(mo.x != 0 || mo.y != 0)
+        {
+            playerani.SetBool("ismove", true);
+        }
+        else
+        {
+            playerani.SetBool("ismove", false);
+        }
         if (energy >= 0) canrun = true;
         else canrun = false;
         if (canrun = false) 

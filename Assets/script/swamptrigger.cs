@@ -25,6 +25,6 @@ public class swamptrigger : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        player.speed = 15;
+        player.speed = 5;
     }
 }
