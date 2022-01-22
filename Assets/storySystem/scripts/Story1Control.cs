@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Story1Control : MonoBehaviour
 {
     RawImage[] storypicture;
+
     // Start is called before the first frame update
     void Start()
     {
