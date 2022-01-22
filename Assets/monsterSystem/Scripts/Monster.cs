@@ -38,7 +38,9 @@ public class Monster : MonoBehaviour
         //monsterAnimator = GetComponent<Animator>();
         monsterAi = monsterAisystem.GetComponent<MonsterAIsys>();
         StartCoroutine(breath());
+        cautionset = false;
         StartCoroutine(op());
+        
     }
     IEnumerator op()
     {
@@ -173,10 +175,10 @@ public class Monster : MonoBehaviour
                 ml.intensity = 0.1f * i;
                 i += 1;
             }
-            print("asd");
+            //print("asd");
             while (i > 20)
             {
-                print(i);
+                //print(i);
                 yield return new WaitForSeconds(0.01f);
                 ml.intensity = 0.1f * i;
                 i -= 1;
