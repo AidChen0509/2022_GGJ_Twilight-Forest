@@ -7,13 +7,13 @@ public class MonsterBehavior : Monster
     //entry point
     [SerializeField] GameObject monsterlocation;
     [SerializeField] GameObject playerlocation;
-    public Transform monsterLocation1;
-    public Transform monsterLocation2;
+    public Transform[] monsterLocation1;
 
-    public GameObject monsterAiLocation2;
+    
     private void Start()
     {
         //gettransform system
+        
         
     }
     //method
@@ -31,5 +31,17 @@ public class MonsterBehavior : Monster
     public void crazyWalking(GameObject playerLocation)
     {
         //design the monster run fast to catch the player
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(state == 1 && collision.tag == "Player")
+        {
+            //gameover
+        }
+        else
+        {
+
+        }
     }
 }

@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class MonsterAIsys : MonoBehaviour
 {
-    public GameObject playerLocation;
+    public GameObject LastplayerLocation;
     public GameObject playeringame;
     public MonsterBehavior Mbehavior;
+    public Monster mm;
     
 
     // Start is called before the first frame update
@@ -24,8 +25,9 @@ public class MonsterAIsys : MonoBehaviour
 
     internal void idlemode(GameObject monsterObject)
     {
+        //·í¥Ø¼Ð
+        mm = monsterObject.GetComponent<MonsterBehavior>();
         
-        monsterObject.GetComponent<MonsterBehavior>().idleWalking(playerLocation);
         
         
         throw new NotImplementedException();
@@ -33,16 +35,18 @@ public class MonsterAIsys : MonoBehaviour
 
     internal void cautionMode(GameObject monsterObject)
     {
-        playerLocation.transform.position = playeringame.transform.position;
-        monsterObject.GetComponent<MonsterBehavior>().cautionWalking(playerLocation);
         
+        LastplayerLocation.transform.position = playeringame.transform.position;
+        mm = monsterObject.GetComponent<MonsterBehavior>();
+
+
         throw new NotImplementedException();
     }
 
     internal void crazyMode(GameObject monsterObject)
     {
-        playerLocation.transform.position = playeringame.transform.position;
-        monsterObject.GetComponent <MonsterBehavior>().crazyWalking(playerLocation); 
+        LastplayerLocation.transform.position = playeringame.transform.position;
+        monsterObject.GetComponent <MonsterBehavior>().crazyWalking(LastplayerLocation); 
         throw new NotImplementedException();
     }
 }
