@@ -29,11 +29,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4154073445165466808, guid: f5d841b7ea93e5246947c500a254e13e, type: 3}
       propertyPath: m_Name
-      value: monster
+      value: monster Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4154073445165466812, guid: f5d841b7ea93e5246947c500a254e13e, type: 3}
       propertyPath: target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154073445165466814, guid: f5d841b7ea93e5246947c500a254e13e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4154073445165466815, guid: f5d841b7ea93e5246947c500a254e13e, type: 3}
       propertyPath: m_RootOrder
