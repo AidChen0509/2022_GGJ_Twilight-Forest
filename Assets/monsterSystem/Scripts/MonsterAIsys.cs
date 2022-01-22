@@ -7,14 +7,16 @@ public class MonsterAIsys : MonoBehaviour
 {
     public GameObject LastplayerLocation;
     public GameObject playeringame;
+    public GameObject patrol;
     public MonsterBehavior Mbehavior;
     public Monster mm;
-    
-
+    public GameObject[] point;
+    public Vector3 p;
+    public bool cpoint;
     // Start is called before the first frame update
     void Start()
     {
-        
+        p = patrol.transform.position;
     }
 
     // Update is called once per frame
@@ -23,15 +25,13 @@ public class MonsterAIsys : MonoBehaviour
         
     }
 
-    /*internal void idlemode(GameObject monsterObject)
+    internal Vector3 idlemode(GameObject monsterObject)
     {
         //·í¥Ø¼Ð
-        mm = monsterObject.GetComponent<MonsterBehavior>();
-        
-        
-        
+        Vector3 transform1 = monsterObject.transform.position;
+        return transform1;
         throw new NotImplementedException();
-    }*/
+    }
 
     internal void cautionMode(GameObject monsterObject)
     {
