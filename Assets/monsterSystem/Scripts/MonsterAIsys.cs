@@ -23,7 +23,7 @@ public class MonsterAIsys : MonoBehaviour
         
     }
 
-    internal void idlemode(GameObject monsterObject)
+    /*internal void idlemode(GameObject monsterObject)
     {
         //·í¥Ø¼Ð
         mm = monsterObject.GetComponent<MonsterBehavior>();
@@ -31,7 +31,7 @@ public class MonsterAIsys : MonoBehaviour
         
         
         throw new NotImplementedException();
-    }
+    }*/
 
     internal void cautionMode(GameObject monsterObject)
     {

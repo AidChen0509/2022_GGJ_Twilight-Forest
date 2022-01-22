@@ -16,7 +16,7 @@ public class Monster : MonoBehaviour
     public int state = 0;
     public int cautionValue = 0;
     public bool IsCatchedPlayer = false;
-
+    public Transform dot;
     //光線距離
     public float lightDistance = 3.0f;
     //玩家最後位置
@@ -40,7 +40,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 direction = new Vector2( LastplayerPosition.position.x - this.transform.position.x, LastplayerPosition.position.y - this.transform.position.y);
+        Vector2 direction = new Vector2( LastplayerPosition.position.x - dot.position.x, LastplayerPosition.position.y - dot.position.y);
 
 
         lightcatched(direction);
@@ -52,13 +52,14 @@ public class Monster : MonoBehaviour
     {
         //原本的直線
         rayLook(directon2);
-
+        //Debug.Log("c");
         //額外的直線
         float subangle = (lookAngle / 2)/lookAccurate;
         Vector2 offsetlight = new Vector2(Mathf.Cos(subangle), Mathf.Sin(subangle));
-        for(int i = 0; i < lookAccurate; i++)
+        //Debug.Log("B");
+        for (int i = 0; i < lookAccurate; i++)
         {
-            Debug.Log("A");
+            //Debug.Log("A");
             rayLook(directon2 + offsetlight * i);
             rayLook(directon2 - offsetlight * i);
         }
@@ -68,11 +69,17 @@ public class Monster : MonoBehaviour
 
     private void rayLook(Vector2 direction)
     {
-        Debug.DrawRay(this.transform.position, direction, Color.green, lightDistance);
-        
-        if (Physics2D.Raycast(this.transform.position, direction, lightDistance).collider.tag == "Player")
+        Debug.DrawRay(dot.position, direction, Color.green, 0.5f);
+        try
         {
-            cautionValue += 10;
+            if (Physics2D.Raycast(dot.position, direction, lightDistance).collider.tag == "Player")
+            {
+                cautionValue += 10;
+            }
+        }
+        catch(Exception ex)
+        {
+            return;
         }
         
     }
@@ -83,7 +90,7 @@ public class Monster : MonoBehaviour
         if (cautionValue == 0)
         {
             state = 0;
-            monsterAi.idlemode(this.gameObject);
+            //monsterAi.idlemode(this.gameObject);
             
         }
         else if (cautionValue < 100 && cautionValue > 0)
