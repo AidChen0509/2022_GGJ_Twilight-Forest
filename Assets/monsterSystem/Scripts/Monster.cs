@@ -96,12 +96,12 @@ public class Monster : MonoBehaviour
         else if (cautionValue < 100 && cautionValue > 0)
         {
             state = 1;
-            monsterAi.cautionMode(this.gameObject);
+            //monsterAi.cautionMode(this.gameObject);
                        
         }else if (cautionValue == 100)
         {
             state = 2;
-            monsterAi.crazyMode(this.gameObject);
+            //monsterAi.crazyMode(this.gameObject);
         }
     }
 
