@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Circle: {fileID: 4438341387811242044}
-  light: {fileID: 4438341388191111387}
 --- !u!50 &4438341387811242046
 Rigidbody2D:
   serializedVersion: 4
@@ -180,7 +179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4438341388191111381
 Transform:
   m_ObjectHideFlags: 0
@@ -211,7 +210,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2.29
+  m_Intensity: 1.04
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: 1af198943a903e1419570c7170b1a670, type: 3}

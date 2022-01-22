@@ -110,7 +110,7 @@ public class Monster : MonoBehaviour
             //Debug.Log(playerobj.name);
             if (Colobj.tag == "Player")
             {
-                Debug.Log("p");
+                //Debug.Log("p");
                 //print(playerobj.tag);
                 
                 cautionset = true;

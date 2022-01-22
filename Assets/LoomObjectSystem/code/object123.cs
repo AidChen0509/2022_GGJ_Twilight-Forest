@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class object123 : MonoBehaviour
 {
     public GameObject Circle;
-    public GameObject light;
+    GameObject light ;
     // Start is called before the first frame update
     void Start()
     {
+        light = this.transform.GetChild(0).gameObject;
        // new WaitForSeconds(1f);
     }
 
@@ -26,7 +27,8 @@ public class object123 : MonoBehaviour
         }
         if (other.gameObject.tag == "light") 
         {
-            light.SetActive(true);
+            print("a");
+            light.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity =2.2f;
         }
     }
 }

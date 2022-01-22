@@ -15,11 +15,12 @@ public class playermove : MonoBehaviour
     public Vector2 mo;
     public Animator playerani;
     public Vector2 mousePosition;
+    public Transform playersp;
     // Start is called before the first frame update
     void Start()
     {
 
-        
+        this.transform.position = playersp.position;
         mousePosition.x = 0f;
         mousePosition.y = 0f;
     }
