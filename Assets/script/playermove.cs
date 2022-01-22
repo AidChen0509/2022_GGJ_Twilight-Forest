@@ -14,10 +14,14 @@ public class playermove : MonoBehaviour
     public bool trapact;
     public Vector2 mo;
     public Animator playerani;
+    public Vector2 mousePosition;
     // Start is called before the first frame update
     void Start()
     {
 
+        
+        mousePosition.x = 0f;
+        mousePosition.y = 0f;
     }
 
     // Update is called once per frame
@@ -71,13 +75,66 @@ public class playermove : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
     }
     void faceMouse() {
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            if (Input.GetKey(KeyCode.W))
+            {
+                if (mousePosition.y != 1.0f)
+                {
+                    mousePosition.y = mousePosition.y + 0.25f;
+            }
+                if (Input.GetKey(KeyCode.A)!= true)
+                {
+                if (Input.GetKey(KeyCode.D) != true)
+                {
+                    mousePosition.x = 0f;
+                }
+            }
+                
+        }
 
-        Vector2 direction = new Vector2(
-                mousePosition.x - transform.position.x,
-                mousePosition.y - transform.position.y
-            );
-        transform.up = direction;
+            if (Input.GetKey(KeyCode.S))
+            {
+                if (mousePosition.y != -1.0f)
+                {
+                    mousePosition.y = mousePosition.y - 0.25f;
+            }
+            if (Input.GetKey(KeyCode.A) != true)
+            {
+                if (Input.GetKey(KeyCode.D) != true)
+                {
+                    mousePosition.x = 0f;
+                }
+            }
+        }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                if (mousePosition.x != -1.0f)
+                {
+                    mousePosition.x = mousePosition.x - 0.25f;
+                }
+                if (Input.GetKey(KeyCode.W)!=true)
+                {
+                    if (Input.GetKey(KeyCode.S) != true)
+                    {
+                    mousePosition.y = 0f;
+                    }
+                }
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                if (mousePosition.x != 1.0f)
+                {
+                    mousePosition.x = mousePosition.x + 0.25f;
+            }
+            if (Input.GetKey(KeyCode.W) != true)
+            {
+                if (Input.GetKey(KeyCode.S) != true)
+                {
+                    mousePosition.y = 0f;
+                }
+            }
+        }
+        transform.up = mousePosition;
     }
 }
