@@ -188,7 +188,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &472242071
 MonoBehaviour:
@@ -204,8 +204,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storypicture: []
   nextbutton: {fileID: 590582064}
-  maxtime: 30
-  nextScenename: stage1
+  maxtime: 35
+  nextScenename: Stage2
 --- !u!1 &590582062
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ RectTransform:
   - {fileID: 1816426566}
   - {fileID: 590582063}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -592,8 +592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27, y: -22}
-  m_SizeDelta: {x: 1686.1661, y: 1686.1661}
+  m_AnchoredPosition: {x: 27, y: -8.9108}
+  m_SizeDelta: {x: 1104.2867, y: 1097.8217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429478176
 MonoBehaviour:
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d9ee91c4995bb6a4dab0a0d4ee6d670b, type: 3}
+  m_Texture: {fileID: 2800000, guid: 6bddb4acfed356243b1cd39c04b4b4aa, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -831,7 +831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5698218946476525543, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
       propertyPath: m_Text
-      value: "\u9EC3\u660F\u6642\u5206\uFF0C\u54E5\u54E5\u4F86\u5230\u4E86\u68EE\u6797\uFF0C\u5979\u70BA\u4E86\u627E\u5230\"\u767C\u5149\u7684\u679C\u5BE6\"\u62EF\u6551\u59B9\u59B9\u7684\u75BE\u75C5\uFF0C\u65BC\u662F\u8E0F\u5165\u4E86\u9670\u6697\u7684\u68EE\u6797\uFF0C\u4F46\u68EE\u6797\u88E1\u9670\u6697\u5E7D\u51B7\uFF0C\u6C92\u6709\u4E00\u9EDE\u5149\u7DDA\u80FD\u6DF1\u5165\u68EE\u6797\u5167\u90E8\u3002\u5728\u9019\u88E1\u552F\u4E00\u627E\u5230\u7684\u5149\u660E\uFF0C\u53EA\u6709\u4F86\u81EA\u7531\u5E7D\u9748\u7684\u96D9\u773C\uFF0C\u4F46\u5225\u5FD8\u8A18\uFF0C\u53EA\u6709\"\u5E7D\u9748\u7684\u96D9\u773C\"\uFF0C\u80FD\u7167\u4EAE\u4F60\u8FFD\u5C0B\u4E4B\u8DEF"
+      value: "\u54E5\u54E5\u627E\u5230\u4E86\u4E00\u500B\u679C\u5BE6\uFF0C\u4ED6\u62FF\u7D66\u4E86\u5DEB\u5E2B\uFF0C\u5DEB\u5E2B\u5E36\u8457\u54E5\u54E5\u9032\u5165\u68EE\u6797\uFF0C\u4E5F\u544A\u8A34\u4E86\u54E5\u54E5\u90A3\u767C\u5149\u7684\u679C\u5BE6\uFF0C\u201C\u5594\uFF0C\u7D04\u7FF0\uFF0C\u4F60\u627E\u5230\u4E86\u679C\u5BE6\u201C\u5DEB\u5E2B\u7528\u6C99\u555E\u8001\u9081\u7684\u8072\u97F3\u8FF4\u76EA\u5728\u54E5\u54E5\u8033\u908A\uFF0C\u201C\u4F46\u2026\u9019\u662F\u4E0D\u5920\u7684\u201C\u5DEB\u5E2B\u6416\u6416\u982D\uFF0C\u201C\u4F60\u7684\u59B9\u59B9\uFF0C\u9670\u68EE\u7684\u9ED1\u6697\u906E\u853D\u4E86\u5979\u7684\u96D9\u773C\uFF0C\u5E7D\u9B42\u7684\u5636\u558A\u7E08\u7E5E\u5979\u7684\u8033\u819C\uFF0C\u6CBC\u6FA4\u7684\u5C4D\u81ED\u4FB5\u8755\u5979\u7684\u5FC3\u667A\u3002\u5225\u5FD8\u4E86\uFF0C\u552F\u6709\u5149\u660E\u624D\u80FD\u5E36\u5979\u96E2\u958B\u68EE\u6797\u3002\u201C\u5DEB\u5E2B\u6307\u5411\u4E86\u4E0B\u4E00\u500B\u68EE\u6797"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
