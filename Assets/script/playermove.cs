@@ -43,7 +43,7 @@ public class playermove : MonoBehaviour
         }
         else if (!trap)
         {
-            powerui.text = "power:" + power;
+          //  powerui.text = "power:" + power;
             if (Input.GetKey("e")&&!onrun&&power>4)
             {
                 onrun = true;
