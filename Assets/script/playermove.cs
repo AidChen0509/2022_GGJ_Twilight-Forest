@@ -15,6 +15,7 @@ public class playermove : MonoBehaviour
     bool trap;
     bool onrun=false;
     bool oncharge = true;
+    public GameObject sbar;
     public float traptime=2f;
     public bool trapact;
     public float power=100;
@@ -22,7 +23,7 @@ public class playermove : MonoBehaviour
     public Animator playerani;
     public Vector2 mousePosition;
     public Transform playersp;
-    public Text powerui;
+    //public Text powerui;
     public string gameoverScene;
     // Start is called before the first frame update
     void Start()
@@ -44,7 +45,8 @@ public class playermove : MonoBehaviour
         }
         else if (!trap)
         {
-            powerui.text = "power:" + power;
+            //powerui.text = "power:" + power;
+            sbar.transform.localScale = new Vector3(power / 100, sbar.transform.localScale.y, sbar.transform.localScale.z);
             if(power==0)
             {
                 runcd = true;
