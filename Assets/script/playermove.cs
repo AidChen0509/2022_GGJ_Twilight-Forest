@@ -10,7 +10,7 @@ public class playermove : MonoBehaviour
     float runspeed;
     float walkspeed;
     public float RotationSpeed;
-    float energy = 20;
+    //float energy = 20;
     bool runcd=false;
     bool trap;
     bool onrun=false;
