@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storypicture: []
   nextbutton: {fileID: 590582064}
-  maxtime: 15
+  maxtime: 5
   nextScenename: StartMenu
 --- !u!1 &590582062
 GameObject:
@@ -960,15 +960,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5698218945293131499, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
       propertyPath: m_Color.b
-      value: 0.7990745
+      value: 0.9921569
       objectReference: {fileID: 0}
     - target: {fileID: 5698218945293131499, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
       propertyPath: m_Color.g
-      value: 0.7990745
+      value: 0.9921569
       objectReference: {fileID: 0}
     - target: {fileID: 5698218945293131499, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
       propertyPath: m_Color.r
-      value: 0.8113208
+      value: 0.9921569
       objectReference: {fileID: 0}
     - target: {fileID: 5698218946476525542, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
       propertyPath: charsPerSecond
