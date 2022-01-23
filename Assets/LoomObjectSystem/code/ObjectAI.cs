@@ -20,7 +20,7 @@ public class ObjectAI : MonoBehaviour
         goaltext.text = "goal: " + colla + "/" + Goal;
     }
 
-    public void SpawnObject()//生成食物
+    /*public void SpawnObject()//生成食物
     {
         if (transform.childCount < 7)
         {
@@ -42,7 +42,7 @@ public class ObjectAI : MonoBehaviour
     void Update()
     {
         //SpawnTrap();
-        SpawnObject();
+        //SpawnObject();
         PointCounter();
     }
 
