@@ -110,7 +110,7 @@ public class playermove : MonoBehaviour
     }
     IEnumerator runcharge()
     {
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.1f);
         if (power < 100)
             power += 1;
         oncharge = true;
