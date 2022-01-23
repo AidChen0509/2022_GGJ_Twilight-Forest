@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class playermove : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -10,11 +10,12 @@ public class playermove : MonoBehaviour
     float runspeed;
     float walkspeed;
     public float RotationSpeed;
-    float energy = 20;
-    bool canrun;
+    //float energy = 20;
+    bool runcd=false;
     bool trap;
     bool onrun=false;
     bool oncharge = true;
+    public GameObject sbar;
     public float traptime=2f;
     public bool trapact;
     public float power=100;
@@ -22,7 +23,8 @@ public class playermove : MonoBehaviour
     public Animator playerani;
     public Vector2 mousePosition;
     public Transform playersp;
-    public Text powerui;
+    //public Text powerui;
+    public string gameoverScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,15 +45,22 @@ public class playermove : MonoBehaviour
         }
         else if (!trap)
         {
-          //  powerui.text = "power:" + power;
-            if (Input.GetKey("e")&&!onrun&&power>4)
+            //powerui.text = "power:" + power;
+            sbar.transform.localScale = new Vector3(power / 100, sbar.transform.localScale.y, sbar.transform.localScale.z);
+            if(power==0)
+            {
+                runcd = true;
+            }
+            if (runcd && power > 40)
+                runcd = false;
+            if (Input.GetKey("e")&&!onrun&&power>6&&!runcd)
             {
                 onrun = true;
                 oncharge = false;
                 speed = runspeed;
                 power -= 7;
                 StartCoroutine(rundelay());
-            }else if(oncharge)
+            }else if(oncharge&&!onrun)
             {
                 oncharge = false;
                 StartCoroutine(runcharge());
@@ -66,13 +75,13 @@ public class playermove : MonoBehaviour
             {
                 playerani.SetBool("ismove", false);
             }
-            if (energy >= 0) canrun = true;
+            /*if (energy >= 0) canrun = true;
             else canrun = false;
             if (canrun = false)
             {
                 energy += Time.deltaTime;
                 if (energy >= 20) canrun = true;
-            }
+            }*/
         }
         
         faceMouse();
@@ -105,6 +114,14 @@ public class playermove : MonoBehaviour
         if (power < 100)
             power += 1;
         oncharge = true;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag=="monster")
+        {
+            print("gameover");
+            SceneManager.LoadScene(gameoverScene); 
+        }
     }
     void faceMouse() {
             if (Input.GetKey(KeyCode.W))

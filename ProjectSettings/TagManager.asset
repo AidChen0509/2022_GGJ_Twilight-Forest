@@ -10,6 +10,7 @@ TagManager:
   - trap
   - monster
   - light
+  - exit
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - wallgroup
   - Water
   - UI
-  - 
+  - ghost
   - 
   - 
   - 
