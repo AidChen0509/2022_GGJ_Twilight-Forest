@@ -11,7 +11,7 @@ public class playermove : MonoBehaviour
     float walkspeed;
     public float RotationSpeed;
     float energy = 20;
-    bool canrun;
+    bool runcd=false;
     bool trap;
     bool onrun=false;
     bool oncharge = true;
@@ -44,14 +44,20 @@ public class playermove : MonoBehaviour
         else if (!trap)
         {
             powerui.text = "power:" + power;
-            if (Input.GetKey("e")&&!onrun&&power>4)
+            if(power==0)
+            {
+                runcd = true;
+            }
+            if (runcd && power > 40)
+                runcd = false;
+            if (Input.GetKey("e")&&!onrun&&power>6&&!runcd)
             {
                 onrun = true;
                 oncharge = false;
                 speed = runspeed;
                 power -= 7;
                 StartCoroutine(rundelay());
-            }else if(oncharge)
+            }else if(oncharge&&!onrun)
             {
                 oncharge = false;
                 StartCoroutine(runcharge());
@@ -66,13 +72,13 @@ public class playermove : MonoBehaviour
             {
                 playerani.SetBool("ismove", false);
             }
-            if (energy >= 0) canrun = true;
+            /*if (energy >= 0) canrun = true;
             else canrun = false;
             if (canrun = false)
             {
                 energy += Time.deltaTime;
                 if (energy >= 20) canrun = true;
-            }
+            }*/
         }
         
         faceMouse();
