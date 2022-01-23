@@ -27,7 +27,7 @@ public class object123 : MonoBehaviour
         }
         if (other.gameObject.tag == "light") 
         {
-            print("a");
+            
             lightobj.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().intensity =2.2f;
         }
     }
