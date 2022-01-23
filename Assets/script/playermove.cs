@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class playermove : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -23,6 +23,7 @@ public class playermove : MonoBehaviour
     public Vector2 mousePosition;
     public Transform playersp;
     public Text powerui;
+    public string gameoverScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -111,6 +112,14 @@ public class playermove : MonoBehaviour
         if (power < 100)
             power += 1;
         oncharge = true;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag=="monster")
+        {
+            print("gameover");
+            SceneManager.LoadScene(gameoverScene); 
+        }
     }
     void faceMouse() {
             if (Input.GetKey(KeyCode.W))

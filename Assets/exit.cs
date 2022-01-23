@@ -24,7 +24,7 @@ public class exit : MonoBehaviour
         {
             if(GameObject.Find("ai").GetComponent<ObjectAI>().colla== GameObject.Find("ai").GetComponent<ObjectAI>().Goal&& GameObject.Find("ai").GetComponent<ObjectAI>().colla!=0)
             {
-                print("asd");
+                print("next level");
                 SceneManager.LoadScene(Scene);
             }
         }
