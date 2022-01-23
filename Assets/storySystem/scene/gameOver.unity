@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storypicture: []
   nextbutton: {fileID: 590582064}
-  maxtime: 15
+  maxtime: 5
   nextScenename: StartMenu
 --- !u!1 &590582062
 GameObject:
