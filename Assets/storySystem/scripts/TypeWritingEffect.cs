@@ -54,7 +54,7 @@ public class TypeWritingEffect : MonoBehaviour
                 }
             }
         }
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     private void OnFinish()
@@ -63,6 +63,6 @@ public class TypeWritingEffect : MonoBehaviour
         timer = 0;
         currentPos = 0;
         myText.text = words;
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 }
