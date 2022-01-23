@@ -53,7 +53,7 @@ public class playermove : MonoBehaviour
             }
             if (runcd && power > 40)
                 runcd = false;
-            if (Input.GetKey("e")&&!onrun&&power>6&&!runcd)
+            if (Input.GetKey(KeyCode.LeftShift)&&!onrun&&power>6&&!runcd)
             {
                 onrun = true;
                 oncharge = false;
