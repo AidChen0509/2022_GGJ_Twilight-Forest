@@ -205,7 +205,7 @@ MonoBehaviour:
   storypicture: []
   nextbutton: {fileID: 590582064}
   maxtime: 10
-  nextScenename: Stage3
+  nextScenename: Storyscene5
 --- !u!1 &590582062
 GameObject:
   m_ObjectHideFlags: 0

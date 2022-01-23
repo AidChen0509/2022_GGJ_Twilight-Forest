@@ -205,7 +205,7 @@ MonoBehaviour:
   storypicture: []
   nextbutton: {fileID: 590582064}
   maxtime: 25
-  nextScenename: Storyscene8
+  nextScenename: StartMenu
 --- !u!1 &590582062
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,11 +240,11 @@ RectTransform:
   m_Father: {fileID: 896136410}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 33}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 287.2776, y: 165.9065}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590582064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 0.95686275}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -592,8 +592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44.864, y: -54}
-  m_SizeDelta: {x: 981.4454, y: 1343.5038}
+  m_AnchoredPosition: {x: 0, y: 0.0000038146973}
+  m_SizeDelta: {x: 886.228, y: 1112.2083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429478176
 MonoBehaviour:
@@ -608,14 +608,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.36078432}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 86e7782b3e6660848a68b7f1a0712408, type: 3}
+  m_Texture: {fileID: 2800000, guid: a078e47be19bd3a4a853ff649e8c0899, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -725,6 +725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: story1
       objectReference: {fileID: 0}
+    - target: {fileID: 5698218945293131497, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5698218945293131498, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -831,7 +835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5698218946476525543, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
       propertyPath: m_Text
-      value: "\u7D04\u7FF0\u6C92\u6709\u8A9E\u8A00\uFF0C\u6C92\u6709\u54ED\u6CE3\uFF0C\u6C92\u6709\u6028\u5606\uFF0C\u4ED6\u53EA\u662F\u975C\u975C\u5730\u7B49\u5F85\u8457\u967D\u5149\u7051\u5728\u8EAB\u4E0A\uFF0C\u5E7D\u6697\u7684\u623F\u9593\u88E1\uFF0C\u53EA\u5269\u4E0B\u7D04\u7FF0\u3002\u9805\u589C\u5728\u65E5\u5149\u6D88\u6563\u4E4B\u524D\uFF0C\u88AB\u7D04\u7FF0\u62FF\u8D70\u3002"
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d6df9039b78ea479844a2bef9cac09, type: 3}
