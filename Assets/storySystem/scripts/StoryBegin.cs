@@ -19,7 +19,7 @@ public class StoryBegin : MonoBehaviour
     }
     public void startmenu()
     {
-        SceneManager.LoadScene("stage1");
+        SceneManager.LoadScene("Storyscene1");
     }
     public void endgame()
     {
