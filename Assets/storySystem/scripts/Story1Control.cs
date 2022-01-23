@@ -14,10 +14,14 @@ public class Story1Control : MonoBehaviour
     //­p®É
     float timer_f;
     int timer_i;
+    int futuretime;
     // Start is called before the first frame update
     void Start()
     {
         nextbutton.gameObject.SetActive(false);
+        timer_f = Time.time;
+        timer_i = Mathf.FloorToInt(timer_f);
+        futuretime = timer_i + maxtime;
     }
 
     // Update is called once per frame
@@ -26,8 +30,10 @@ public class Story1Control : MonoBehaviour
         timer_f = Time.time;
         timer_i = Mathf.FloorToInt(timer_f);
         Debug.Log(timer_i);
-        if(timer_i == maxtime)
+        
+        if(timer_i == futuretime)
         {
+            
             nextbutton.gameObject.SetActive(true);
         }
     }
