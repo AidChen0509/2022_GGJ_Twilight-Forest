@@ -6,6 +6,7 @@ public class trap123 : MonoBehaviour
 {
     public GameObject player;
     public GameObject monster;
+    public GameObject music;
     public Sprite trapimg;
     GameObject light;
     GameObject light2;
@@ -28,6 +29,7 @@ public class trap123 : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             print("a");
+            StartCoroutine(music1());
             other.GetComponent<playermove>().trapact = true;
             monster = GameObject.FindGameObjectWithTag("monster").gameObject;
             monster.GetComponent<Monster>().cautionset = true;
@@ -40,5 +42,12 @@ public class trap123 : MonoBehaviour
             light.gameObject.SetActive(false);
             light2.gameObject.SetActive(true);
         }
+    }
+    IEnumerator music1()
+    {
+        music.SetActive(true);
+        yield return new WaitForSeconds(4.5f);
+        music.SetActive(false);
+
     }
 }

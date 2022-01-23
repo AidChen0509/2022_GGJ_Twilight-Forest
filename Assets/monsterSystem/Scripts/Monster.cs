@@ -12,7 +12,7 @@ public class Monster : MonoBehaviour
     //public Animator monsterAnimator;
     [SerializeField] MonsterAIsys monsterAi;
     public GameObject monsterAisystem;
-
+    public GameObject music;
     //stat 參數與caution數值
     public int state = 0;
     public bool cautionset = false;
@@ -36,6 +36,7 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        music.SetActive(false);
         //monsterAnimator = GetComponent<Animator>();
         monsterAi = monsterAisystem.GetComponent<MonsterAIsys>();
         StartCoroutine(breath());
@@ -128,6 +129,7 @@ public class Monster : MonoBehaviour
 
         if (cautionValue <= 0)
         {
+           
             cautionValue = 0;
             this.GetComponent<Pathfinding.IAstarAI>().maxSpeed = 3;
             if (cpoint)
@@ -148,6 +150,8 @@ public class Monster : MonoBehaviour
         {
             state = 1;
             ml.color = Color.red;
+            StartCoroutine(music1());
+            
             lastplayerpos.position = playerobj.transform.position;
             this.GetComponent<Pathfinding.IAstarAI>().maxSpeed = 3;
             //monsterAi.cautionMode(this.gameObject);
@@ -163,7 +167,13 @@ public class Monster : MonoBehaviour
             //monsterAi.crazyMode(this.gameObject);
         }
     }
-    
+    IEnumerator  music1()
+    {
+        music.SetActive(true);
+        yield return new WaitForSeconds(8.5f);
+        music.SetActive(false);
+
+    }
     IEnumerator breath()
     {
         int i = 0;
