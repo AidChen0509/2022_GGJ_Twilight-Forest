@@ -7,10 +7,12 @@ public class timemanger : MonoBehaviour
     public float time1, time2, time3, time4;
   //  public GameObject light;
     public Light2D Tfl;
+    public GameObject monster;
 
     // Start is called before the first frame update
     void Start()
     {
+        monster = GameObject.Find("monster").gameObject;
         Tfl.intensity = 0f;
         time1 = Random.Range(10,50);
         time2 = Random.Range(65, 85);
@@ -31,6 +33,7 @@ public class timemanger : MonoBehaviour
         //1
         Tfl.intensity = 0.3f;
         yield return new WaitForSeconds(0.25f);
+        monster.GetComponent<Monster>().cautionValue = 120;
         Tfl.intensity = 0f;
         yield return new WaitForSeconds(0.25f);
         Tfl.intensity = 0.3f;
@@ -45,6 +48,7 @@ public class timemanger : MonoBehaviour
         yield return new WaitForSeconds((time2-time1-3)*0.3f);
         Tfl.intensity = 0.3f;
         yield return new WaitForSeconds(0.25f);
+        monster.GetComponent<Monster>().cautionValue = 120;
         Tfl.intensity = 0f;
         yield return new WaitForSeconds(0.25f);
         Tfl.intensity = 0.3f;
@@ -59,6 +63,7 @@ public class timemanger : MonoBehaviour
         yield return new WaitForSeconds((time3 - time2-6)*0.3f);
         Tfl.intensity = 0.3f;
         yield return new WaitForSeconds(0.25f);
+        monster.GetComponent<Monster>().cautionValue = 120;
         Tfl.intensity = 0f;
         yield return new WaitForSeconds(0.25f);
         Tfl.intensity = 0.3f;
@@ -73,6 +78,7 @@ public class timemanger : MonoBehaviour
         yield return new WaitForSeconds((time4 - time3-9)*0.3f);
         Tfl.intensity = 0.3f;
         yield return new WaitForSeconds(0.25f);
+        monster.GetComponent<Monster>().cautionValue = 120;
         Tfl.intensity = 0f;
         yield return new WaitForSeconds(0.25f);
         Tfl.intensity = 0.3f;

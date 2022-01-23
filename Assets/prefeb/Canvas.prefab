@@ -219,7 +219,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 9fa4bef22680f4249910b9f6375e1b9e, type: 3}
     m_FontSize: 62
     m_FontStyle: 0
     m_BestFit: 0
@@ -462,6 +462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: exit
       objectReference: {fileID: 0}
+    - target: {fileID: 3817039975163646511, guid: 883eb05c9ba83a54e99e123aa26a9c0b, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 9fa4bef22680f4249910b9f6375e1b9e, type: 3}
     - target: {fileID: 7657763461442276174, guid: 883eb05c9ba83a54e99e123aa26a9c0b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -652,6 +656,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'power:'
       objectReference: {fileID: 0}
+    - target: {fileID: 2508795717991186220, guid: fa022002cb02e5c44bd53c0fd3e96ae7, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 9fa4bef22680f4249910b9f6375e1b9e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa022002cb02e5c44bd53c0fd3e96ae7, type: 3}
 --- !u!224 &7503174994773618656 stripped
