@@ -1,25 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playermove : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed;
+    float runspeed;
+    float walkspeed;
     public float RotationSpeed;
     float energy = 20;
     bool canrun;
     bool trap;
+    bool onrun=false;
+    bool oncharge = true;
     public float traptime=2f;
     public bool trapact;
+    public float power=100;
     public Vector2 mo;
     public Animator playerani;
     public Vector2 mousePosition;
     public Transform playersp;
+    public Text powerui;
     // Start is called before the first frame update
     void Start()
     {
-
+        runspeed = speed + 3;
+        walkspeed = speed;
+        //powerui = gameObject.transform.Find("powerui").GetComponent<Text>();
         this.transform.position = playersp.position;
         mousePosition.x = 0f;
         mousePosition.y = 0f;
@@ -34,6 +43,19 @@ public class playermove : MonoBehaviour
         }
         else if (!trap)
         {
+            powerui.text = "power:" + power;
+            if (Input.GetKey("e")&&!onrun&&power>4)
+            {
+                onrun = true;
+                oncharge = false;
+                speed = runspeed;
+                power -= 7;
+                StartCoroutine(rundelay());
+            }else if(oncharge)
+            {
+                oncharge = false;
+                StartCoroutine(runcharge());
+            }
             rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
             mo = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
             if (mo.x != 0 || mo.y != 0)
@@ -70,10 +92,19 @@ public class playermove : MonoBehaviour
         yield return new WaitForSeconds(traptime);
         trap = false;
     }
-
-    IEnumerator energytime()
+    IEnumerator rundelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        speed = walkspeed;
+        oncharge = true;
+        onrun = false;
+    }
+    IEnumerator runcharge()
     {
         yield return new WaitForSeconds(0.05f);
+        if (power < 100)
+            power += 1;
+        oncharge = true;
     }
     void faceMouse() {
             if (Input.GetKey(KeyCode.W))
