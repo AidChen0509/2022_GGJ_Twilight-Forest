@@ -68,7 +68,7 @@ The theme for Global Game Jam 2022 was **"Duality."** Based on this concept, our
 
 - **Yi Xin** (National Formosa University, CSE) - Programming
 - **Yen Yu-Hsiang** (Taipei Tech, IxD) - Game Design, Programming, Sound & Music
-- **Chen Wen-Sheng** (Taipei Tech, IxD) - Coordination, Git Management, Programming
+- **Chen Wen-Chen** (Taipei Tech, IxD) - Coordination, Git Management, Programming
 - **Li Pei-Lin** (Lunghwa University, MGS) - Art, Sound & Music, Programming Support
 - **Chou Sheng-Ting** (Tamkang University, CSE) - Programming
 - **Lin Yi-Hsiang** (Tunghai University, IE) - Game Design, Art, Data Organization
